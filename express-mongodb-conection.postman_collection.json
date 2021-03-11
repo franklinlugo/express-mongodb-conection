@@ -1,0 +1,61 @@
+{
+  "info": {
+    "_postman_id": "35a7c97f-933e-42f3-8a56-3f3827c554da",
+    "name": "express-mongodb-conection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "get users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4000/api/users",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get users by age",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4000/api/user/age?l=10&h=30",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "user", "age"],
+          "query": [
+            {
+              "key": "l",
+              "value": "10"
+            },
+            {
+              "key": "h",
+              "value": "30"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get users by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:4000/api/user/",
+          "host": ["localhost"],
+          "port": "4000",
+          "path": ["api", "user", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}

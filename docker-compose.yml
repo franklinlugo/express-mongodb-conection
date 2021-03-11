@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  server:
+    stdin_open: true
+    container_name: serverapp
+    build: .
+    ports:
+      - '4000:4000'
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
